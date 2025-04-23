@@ -40,8 +40,9 @@ public_users.get("/", async (req, res) => {
     return res.send(JSON.stringify(books));
 });
 
+
 // Get book details based on ISBN
-public_users.get("/isbn/:isbn", async (req, res) => {
+public_users.get("/isbn/:isbn",  (req, res) => {
     let foundbook = books[req.params.isbn]
     return res.send(JSON.stringify(foundbook));
 });
